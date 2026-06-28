@@ -1,0 +1,137 @@
+User says:
+"Open Chrome and search YouTube"
+
+↓
+Input Layer
+
+↓
+Intent Detection
+
+↓
+Task Planning
+
+↓
+Tool Selection
+
+↓
+Automation Execution
+
+↓
+Response Back
+
+
+
+
+USER_MESSAGE_RECEIVED
+VOICE_COMMAND_RECEIVED
+APP_OPENED
+DOWNLOAD_COMPLETED
+SCREEN_LOCKED
+AI_RESPONSE_STREAM
+
+
+
+
+tools/
+ ├── openAppTool.js
+ ├── searchWebTool.js
+ ├── shutdownTool.js
+ └── screenshotTool.js
+
+ Ambitions
+
+1. Open Chrome
+2. Search ChatGPT
+3. Open ChatGPT website
+4. Read code from VSCode
+5. Copy code
+6. Paste into ChatGPT
+7. Submit prompt
+
+
+Multi-App Contextual Automation✨📊
+
+Required Layers
+
+Planner
+↓
+Executor
+↓
+Automation Engine
+↓
+State Manager
+
+The Required Structure
+
+[
+  {
+    "tool": "openApp",
+    "args": {
+      "app": "chrome"
+    }
+  },
+  {
+    "tool": "searchWeb",
+    "args": {
+      "query": "ChatGPT"
+    }
+  },
+  {
+    "tool": "openWebsite",
+    "args": {
+      "url": "https://chatgpt.com"
+    }
+  },
+  {
+    "tool": "focusApp",
+    "args": {
+      "app": "vscode"
+    }
+  },
+  {
+    "tool": "copySelectedText"
+  },
+  {
+    "tool": "focusApp",
+    "args": {
+      "app": "chrome"
+    }
+  },
+  {
+    "tool": "pasteClipboard"
+  }
+]
+
+Apps Required
+[System-TOOLS]
+open app
+close app
+focus app
+minimize app
+maximize app
+
+
+
+Possible tools
+
+openAppTool.js
+focusWindowTool.js
+closeAppTool.js
+
+
+Browser Controls
+[Browser-Tools]
+open URL
+search query
+click element
+type text
+
+Clipboard System [for copy pasting]
+
+
+Window Management
+
+current active app
+open windows
+focused window
+browser tabs

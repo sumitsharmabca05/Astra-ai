@@ -36,4 +36,5 @@ async function chat(message, retries = 5 ) {
     return data.message.content
 }
 
+
 module.exports = {chat};
